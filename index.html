@@ -358,7 +358,7 @@
     // Conectar lista de espera (opcional) con Formspree:
     // 1) Creás un form en Formspree -> te da un endpoint tipo https://formspree.io/f/abcdwxyz
     // 2) Pegás ese endpoint acá:
-    const FORMSPREE_ENDPOINT = ""; // <-- pegalo aquí cuando lo tengas
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvpdgkv"; // <-- pegalo aquí cuando lo tengas
 
     const form = document.getElementById('waitlistForm');
     const msg = document.getElementById('formMsg');
@@ -398,6 +398,53 @@
       }
     });
   </script>
+  <script>
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvpdgkv";
+
+  const form = document.getElementById('waitlistForm');
+  const msg = document.getElementById('formMsg');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (msg) {
+        msg.classList.remove('hidden');
+        msg.className = "mt-2 text-sm text-slate-600";
+        msg.textContent = "Enviando...";
+      }
+
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: data
+        });
+
+        if (res.ok) {
+          if (msg) {
+            msg.className = "mt-2 text-sm text-emerald-700";
+            msg.textContent = "Listo. Estás en la lista de espera.";
+          }
+          form.reset();
+        } else {
+          if (msg) {
+            msg.className = "mt-2 text-sm text-red-700";
+            msg.textContent = "No se pudo enviar. Probá de nuevo en unos minutos.";
+          }
+        }
+      } catch (err) {
+        if (msg) {
+          msg.className = "mt-2 text-sm text-red-700";
+          msg.textContent = "Error de red. Verificá tu conexión.";
+        }
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
+
 
