@@ -61,12 +61,12 @@
     :root{
       --navy-950:#071022;
       --navy-900:#0B1220;
-      --brand:#10b981;  /* verde pro */
-      --brand2:#22c55e; /* verde pro */
+      --brand:#10b981;
+      --brand2:#22c55e;
       --blue:#3b82f6;
     }
 
-    /* Secciones con transición suave (evita “cortes” bruscos) */
+    /* Secciones con transición suave */
     .soft-section { position: relative; overflow: hidden; }
     .soft-section::before{
       content:"";
@@ -77,14 +77,6 @@
       z-index: 0;
     }
     .soft-section > *{ position: relative; z-index: 1; }
-
-    /* Fondo oscuro estilo “SaaS” */
-    .hero-dark{
-      background:
-        radial-gradient(1200px 600px at 20% 10%, rgba(16,185,129,0.20), transparent 60%),
-        radial-gradient(900px 500px at 80% 20%, rgba(59,130,246,0.18), transparent 60%),
-        linear-gradient(180deg, var(--navy-950), var(--navy-900));
-    }
 
     /* Texto con degradé */
     .text-gradient{
@@ -115,17 +107,38 @@
     }
     .btn-pro:hover{ transform: translateY(-1px); filter: brightness(1.03); }
 
+    /* HERO con foto + overlay cinematográfico */
+    .hero-photo{
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.03);
+      filter: saturate(1.08) contrast(1.06);
+    }
+    .hero-overlay{
+      background:
+        radial-gradient(1100px 520px at 18% 12%, rgba(16,185,129,0.22), transparent 62%),
+        radial-gradient(900px 480px at 82% 20%, rgba(59,130,246,0.18), transparent 60%),
+        linear-gradient(180deg, rgba(7,16,34,0.78) 0%, rgba(11,18,32,0.82) 55%, rgba(11,18,32,0.92) 100%);
+    }
+    .hero-vignette{
+      box-shadow: inset 0 0 140px rgba(0,0,0,0.55);
+    }
+
+    @media (min-width: 1024px){
+      .hero-photo{ background-position: center 30%; }
+    }
+
     @media (prefers-reduced-motion: reduce){
       .card-pro, .btn-pro{ transition:none !important; }
+      .hero-photo{ transform:none; }
     }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-  <!-- Config rápida de links (tus datos) -->
+  <!-- Links (tus datos) -->
   <script>
-    // WhatsApp: wa.me requiere número sin +, sin espacios.
     // +54 9 1123901640 -> 5491123901640
     window.KC = {
       whatsapp: "https://wa.me/5491123901640",
@@ -157,9 +170,18 @@
   </header>
 
   <!-- Hero -->
-  <section id="inicio" class="relative overflow-hidden hero-dark text-white">
-    <div class="absolute -top-32 -right-28 h-80 w-80 rounded-full bg-emerald-400/20 blur-3xl"></div>
-    <div class="absolute -bottom-32 -left-28 h-80 w-80 rounded-full bg-sky-400/20 blur-3xl"></div>
+  <section id="inicio" class="relative overflow-hidden text-white">
+    <!-- FOTO DE FONDO -->
+    <div class="absolute inset-0 hero-photo"
+         style="background-image:url('/og-image.jpg');"></div>
+
+    <!-- OVERLAY + VIÑETA para legibilidad -->
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 hero-vignette"></div>
+
+    <!-- Brillos suaves -->
+    <div class="absolute -top-32 -right-28 h-80 w-80 rounded-full bg-emerald-400/18 blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-28 h-80 w-80 rounded-full bg-sky-400/14 blur-3xl"></div>
 
     <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
       <div class="grid gap-10 md:grid-cols-2 md:items-center">
@@ -168,7 +190,7 @@
             Academia online (en construcción) · Lanzamiento por etapas
           </p>
 
-          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
             Formación práctica para entrenadores de <span class="text-gradient">Fútbol Infantil</span>
           </h1>
 
@@ -420,12 +442,9 @@
   </section>
 
   <script>
-    // Año automático
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Formspree
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvpdgkv";
-
     const form = document.getElementById('waitlistForm');
     const msg = document.getElementById('formMsg');
 
@@ -439,7 +458,7 @@
 
         const data = new FormData(form);
 
-        // Honeypot anti-spam (si está lleno, es bot)
+        // Honeypot anti-spam
         if (data.get("website")) return;
 
         try {
@@ -467,7 +486,4 @@
 
 </body>
 </html>
-
-
-
 
