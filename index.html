@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN (perfecto para landing rápida) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -57,19 +57,80 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
+    :root{
+      --navy-950:#071022;
+      --navy-900:#0B1220;
+      --brand:#10b981;  /* verde pro */
+      --brand2:#22c55e; /* verde pro */
+      --blue:#3b82f6;
+    }
+
+    /* Secciones con transición suave (evita “cortes” bruscos) */
+    .soft-section { position: relative; overflow: hidden; }
+    .soft-section::before{
+      content:"";
+      position:absolute; inset:-1px 0 auto 0;
+      height: 140px;
+      background: linear-gradient(to bottom, rgba(7,16,34,0.10), rgba(7,16,34,0));
+      pointer-events:none;
+      z-index: 0;
+    }
+    .soft-section > *{ position: relative; z-index: 1; }
+
+    /* Fondo oscuro estilo “SaaS” */
+    .hero-dark{
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(16,185,129,0.20), transparent 60%),
+        radial-gradient(900px 500px at 80% 20%, rgba(59,130,246,0.18), transparent 60%),
+        linear-gradient(180deg, var(--navy-950), var(--navy-900));
+    }
+
+    /* Texto con degradé */
+    .text-gradient{
+      background: linear-gradient(90deg, var(--brand), #7dd3fc);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color: transparent;
+    }
+
+    /* Card moderna */
+    .card-pro{
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow: 0 12px 34px rgba(2,6,23,0.08);
+      border-radius: 24px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card-pro:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 48px rgba(2,6,23,0.12);
+    }
+
+    /* Botón premium */
+    .btn-pro{
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+      box-shadow: 0 18px 40px rgba(16,185,129,0.25);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .btn-pro:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+
+    @media (prefers-reduced-motion: reduce){
+      .card-pro, .btn-pro{ transition:none !important; }
+    }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-  <!-- Config rápida de links (ya cargados con tus datos) -->
+  <!-- Config rápida de links (tus datos) -->
   <script>
     // WhatsApp: wa.me requiere número sin +, sin espacios.
-    // Tu número: +54 9 1123901640 -> 5491123901640
+    // +54 9 1123901640 -> 5491123901640
     window.KC = {
       whatsapp: "https://wa.me/5491123901640",
       instagram: "https://instagram.com/kelocoach",
-      youtube: "https://www.youtube.com/@Kelocoach" // si tu URL real difiere, la cambiás acá
+      youtube: "https://www.youtube.com/@Kelocoach"
     }
   </script>
 
@@ -89,35 +150,34 @@
       </nav>
 
       <a href="#lista"
-         class="inline-flex items-center justify-center rounded-xl bg-brand-900 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-800 transition">
+         class="inline-flex items-center justify-center rounded-xl btn-pro px-4 py-2 text-sm font-semibold text-white transition">
         Unirme a la lista
       </a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="inicio" class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-brand-50 via-white to-slate-50"></div>
-    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-200/40 blur-3xl"></div>
-    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl"></div>
+  <section id="inicio" class="relative overflow-hidden hero-dark text-white">
+    <div class="absolute -top-32 -right-28 h-80 w-80 rounded-full bg-emerald-400/20 blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-28 h-80 w-80 rounded-full bg-sky-400/20 blur-3xl"></div>
 
     <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
       <div class="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600">
+          <p class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs text-slate-200">
             Academia online (en construcción) · Lanzamiento por etapas
           </p>
 
-          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-            Formación práctica para entrenadores de <span class="text-brand-800">Fútbol Infantil</span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+            Formación práctica para entrenadores de <span class="text-gradient">Fútbol Infantil</span>
           </h1>
 
-          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+          <p class="mt-4 text-lg text-slate-200 leading-relaxed">
             Contenido aplicable sobre: metodología, técnica, táctica inicial, preparación física integrada y pedagogía para niños desde los 4 a los 12 años.
           </p>
 
-          <div class="mt-5 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
-            <p class="font-semibold text-slate-900">Credenciales</p>
+          <div class="mt-5 rounded-2xl border border-white/15 bg-white/10 p-4 text-sm text-slate-200">
+            <p class="font-semibold text-white">Credenciales</p>
             <ul class="mt-2 space-y-1">
               <li>• Profesor Nacional de Educación Física</li>
               <li>• Entrenador Licencia A ATFA</li>
@@ -127,28 +187,29 @@
 
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
             <a href="#lista"
-               class="inline-flex items-center justify-center rounded-xl bg-brand-900 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-800 transition">
+               class="inline-flex items-center justify-center rounded-xl btn-pro px-5 py-3 text-sm font-semibold text-white transition">
               Entrar a la lista de espera
             </a>
+
             <a href="#proximamente"
-               class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition">
+               class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">
               Ver roadmap de cursos
             </a>
           </div>
 
-          <p class="mt-3 text-xs text-slate-500">
+          <p class="mt-3 text-xs text-slate-300">
             Nota: formación práctica sin acreditación oficial.
           </p>
         </div>
 
         <!-- Card visual con tu foto -->
         <div class="relative">
-          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="card-pro p-6">
             <div class="flex items-center gap-4">
               <img
                 src="/kelo-portrait-640.webp"
                 alt="Kelo Coach"
-                class="h-20 w-20 rounded-2xl object-cover border border-slate-200"
+                class="h-20 w-20 rounded-2xl object-cover ring-4 ring-brand-100 border border-slate-200"
                 loading="eager"
               />
               <div>
@@ -161,40 +222,40 @@
             </div>
 
             <div class="mt-5 grid gap-3">
-              <div class="rounded-2xl border border-slate-200 p-4">
-                <p class="font-semibold">Lecciones con videos</p>
+              <div class="rounded-2xl border border-slate-200 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
+                <p class="font-semibold text-slate-900">Lecciones con videos</p>
                 <p class="text-sm text-slate-600 mt-1">Explicación clara + demostración aplicada.</p>
               </div>
-              <div class="rounded-2xl border border-slate-200 p-4">
-                <p class="font-semibold">Manuales Descargables</p>
+              <div class="rounded-2xl border border-slate-200 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
+                <p class="font-semibold text-slate-900">Manuales descargables</p>
                 <p class="text-sm text-slate-600 mt-1">Plantillas de sesión, progresiones y rúbricas.</p>
               </div>
-              <div class="rounded-2xl border border-slate-200 p-4">
-                <p class="font-semibold">Micro Pruebas con Progreso</p>
+              <div class="rounded-2xl border border-slate-200 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
+                <p class="font-semibold text-slate-900">Micro pruebas con progreso</p>
                 <p class="text-sm text-slate-600 mt-1">Evaluaciones cortas para consolidar aprendizaje.</p>
               </div>
             </div>
 
             <div class="mt-5 rounded-2xl bg-slate-50 border border-slate-200 p-4">
-              <p class="text-sm font-semibold text-slate-900">¡Se el Primero en enterarte!</p>
+              <p class="text-sm font-semibold text-slate-900">¡Sé el primero en enterarte!</p>
               <p class="text-sm text-slate-600 mt-1">Sumate a la lista y te aviso apenas esté disponible el primer curso.</p>
-              <a href="#lista" class="mt-3 inline-flex w-full items-center justify-center rounded-xl bg-accent-500 px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition">
+              <a href="#lista" class="mt-3 inline-flex w-full items-center justify-center rounded-xl btn-pro px-4 py-2.5 text-sm font-semibold text-white transition">
                 Unirme ahora
               </a>
             </div>
           </div>
 
-          <div class="absolute -z-10 -bottom-6 -right-6 h-40 w-40 rounded-3xl bg-brand-100 blur-2xl"></div>
+          <div class="absolute -z-10 -bottom-6 -right-6 h-40 w-40 rounded-3xl bg-emerald-300/20 blur-2xl"></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="sobre-mi" class="mx-auto max-w-6xl px-4 py-14">
+  <section id="sobre-mi" class="soft-section mx-auto max-w-6xl px-4 py-14">
     <div class="grid gap-8 md:grid-cols-3">
       <div class="md:col-span-1">
-        <h2 class="text-2xl font-extrabold tracking-tight">Quién Soy</h2>
+        <h2 class="text-2xl font-extrabold tracking-tight">Quién soy</h2>
         <p class="mt-2 text-slate-600">
           Me encanta ayudar en la formación de entrenadores y formadores que trabajan con fútbol infantil y necesitan un rumbo, un plan y herramientas prácticas, claras y aplicables.
         </p>
@@ -212,20 +273,20 @@
       </div>
 
       <div class="md:col-span-2 grid gap-4 sm:grid-cols-2">
-        <div class="rounded-2xl border border-slate-200 bg-white p-5">
-          <p class="font-semibold">Enfoque práctico</p>
-          <p class="mt-2 text-sm text-slate-600">Menos teoría suelta, más organización en chancha: consignas, progresiones, correcciones y dosificación.</p>
+        <div class="card-pro p-5">
+          <p class="font-semibold text-slate-900">Enfoque práctico</p>
+          <p class="mt-2 text-sm text-slate-600">Menos teoría suelta, más organización en cancha: consignas, progresiones, correcciones y dosificación.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-5">
-          <p class="font-semibold">Metodología Pedagógica</p>
-          <p class="mt-2 text-sm text-slate-600">Cómo enseñar, cómo comunicar y cómo organizar sesiones, Para qué edad y nivel.</p>
+        <div class="card-pro p-5">
+          <p class="font-semibold text-slate-900">Metodología pedagógica</p>
+          <p class="mt-2 text-sm text-slate-600">Cómo enseñar, cómo comunicar y cómo organizar sesiones. Para qué edad y nivel.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-5">
-          <p class="font-semibold">Planificación</p>
+        <div class="card-pro p-5">
+          <p class="font-semibold text-slate-900">Planificación</p>
           <p class="mt-2 text-sm text-slate-600">Plantillas semanales/mensuales y criterios simples para evaluar progreso.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-5">
-          <p class="font-semibold">Calidad antes que volumen</p>
+        <div class="card-pro p-5">
+          <p class="font-semibold text-slate-900">Calidad antes que volumen</p>
           <p class="mt-2 text-sm text-slate-600">Cursos por etapas. Primero: un curso sólido, completo y terminable.</p>
         </div>
       </div>
@@ -233,7 +294,7 @@
   </section>
 
   <!-- Roadmap -->
-  <section id="proximamente" class="bg-white border-y border-slate-200">
+  <section id="proximamente" class="soft-section bg-white border-y border-slate-200">
     <div class="mx-auto max-w-6xl px-4 py-14">
       <div class="flex items-end justify-between gap-6 flex-wrap">
         <div>
@@ -244,24 +305,24 @@
       </div>
 
       <div class="mt-8 grid gap-4 md:grid-cols-4">
-        <div class="rounded-2xl border border-slate-200 p-5">
+        <div class="card-pro p-5">
           <p class="text-xs text-slate-500">Curso 1</p>
-          <p class="mt-1 font-semibold">Fútbol Infantil 4–6</p>
+          <p class="mt-1 font-semibold text-slate-900">Fútbol Infantil 4–6</p>
           <p class="mt-2 text-sm text-slate-600">Iniciación, juego, coordinación, atención y motivación.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 p-5">
+        <div class="card-pro p-5">
           <p class="text-xs text-slate-500">Curso 2 (MVP recomendado)</p>
-          <p class="mt-1 font-semibold">Fútbol Infantil 7–9</p>
+          <p class="mt-1 font-semibold text-slate-900">Fútbol Infantil 7–9</p>
           <p class="mt-2 text-sm text-slate-600">Técnica base, juegos reducidos, metodología y planificación simple.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 p-5">
+        <div class="card-pro p-5">
           <p class="text-xs text-slate-500">Curso 3</p>
-          <p class="mt-1 font-semibold">Fútbol Infantil 10–12</p>
+          <p class="mt-1 font-semibold text-slate-900">Fútbol Infantil 10–12</p>
           <p class="mt-2 text-sm text-slate-600">Táctica inicial, PF integrada, dosificación y evaluación.</p>
         </div>
-        <div class="rounded-2xl border border-brand-200 bg-brand-50 p-5">
-          <p class="text-xs text-brand-700">Programa completo</p>
-          <p class="mt-1 font-semibold text-brand-900">“Especialista en Fútbol Infantil”</p>
+        <div class="rounded-3xl border border-brand-200 bg-brand-50 p-5 shadow-sm">
+          <p class="text-xs text-brand-700 font-semibold">Programa completo</p>
+          <p class="mt-1 font-extrabold text-brand-900">“Especialista en Fútbol Infantil”</p>
           <p class="mt-2 text-sm text-brand-800">Bundle con bonus (plantillas + rúbricas + biblioteca de juegos).</p>
         </div>
       </div>
@@ -269,7 +330,7 @@
   </section>
 
   <!-- Waitlist -->
-  <section id="lista" class="mx-auto max-w-6xl px-4 py-14">
+  <section id="lista" class="soft-section mx-auto max-w-6xl px-4 py-14">
     <div class="grid gap-10 md:grid-cols-2 md:items-center">
       <div>
         <h2 class="text-2xl font-extrabold tracking-tight">Lista de espera</h2>
@@ -284,7 +345,7 @@
         </ul>
       </div>
 
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="card-pro p-6">
         <form id="waitlistForm" class="space-y-4">
           <div>
             <label class="text-sm font-semibold text-slate-800" for="email">Email</label>
@@ -299,13 +360,15 @@
                    placeholder="Tu nombre"
                    class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-brand-100" />
           </div>
+
+          <!-- Honeypot anti-spam -->
           <div class="hidden">
-          <label for="website">Website</label>
-          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
           </div>
 
           <button type="submit"
-                  class="w-full rounded-xl bg-brand-900 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-800 transition">
+                  class="w-full rounded-xl btn-pro px-4 py-3 text-sm font-semibold text-white transition">
             Unirme a la lista
           </button>
 
@@ -325,7 +388,7 @@
   </section>
 
   <!-- Contact -->
-  <section id="contacto" class="bg-white border-t border-slate-200">
+  <section id="contacto" class="soft-section bg-white border-t border-slate-200">
     <div class="mx-auto max-w-6xl px-4 py-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
       <div>
         <p class="font-semibold">Kelo Coach</p>
@@ -341,7 +404,7 @@
            href="#" onclick="this.href=window.KC.youtube" target="_blank" rel="noopener">
           YouTube
         </a>
-        <a class="rounded-xl bg-accent-500 px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+        <a class="rounded-xl btn-pro px-4 py-2 text-sm font-semibold text-white transition"
            href="#" onclick="this.href=window.KC.whatsapp + '?text=' + encodeURIComponent('Hola Kelo, quiero hacerte una consulta.')"
            target="_blank" rel="noopener">
           WhatsApp
@@ -357,100 +420,54 @@
   </section>
 
   <script>
+    // Año automático
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Conectar lista de espera (opcional) con Formspree:
-    // 1) Creás un form en Formspree -> te da un endpoint tipo https://formspree.io/f/abcdwxyz
-    // 2) Pegás ese endpoint acá:
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvpdgkv"; // <-- pegalo aquí cuando lo tengas
+    // Formspree
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvpdgkv";
 
     const form = document.getElementById('waitlistForm');
     const msg = document.getElementById('formMsg');
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      msg.classList.remove('hidden');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-      if (!FORMSPREE_ENDPOINT) {
-        msg.className = "mt-2 text-sm text-amber-700";
-        msg.textContent = "Formulario aún no conectado. Decime si querés que lo conectemos a Formspree o Google Forms.";
-        return;
-      }
-
-      msg.className = "mt-2 text-sm text-slate-600";
-      msg.textContent = "Enviando...";
-
-      const data = new FormData(form);
-      if (data.get("website")) return;
-      try {
-        const res = await fetch(FORMSPREE_ENDPOINT, {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: data
-        });
-
-        if (res.ok) {
-          msg.className = "mt-2 text-sm text-emerald-700";
-          msg.textContent = "Listo. Estás en la lista de espera.";
-          form.reset();
-        } else {
-          msg.className = "mt-2 text-sm text-red-700";
-          msg.textContent = "No se pudo enviar. Probá de nuevo en unos minutos.";
-        }
-      } catch (err) {
-        msg.className = "mt-2 text-sm text-red-700";
-        msg.textContent = "Error de red. Verificá tu conexión.";
-      }
-    });
-  </script>
-  <script>
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvpdgkv";
-
-  const form = document.getElementById('waitlistForm');
-  const msg = document.getElementById('formMsg');
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (msg) {
         msg.classList.remove('hidden');
         msg.className = "mt-2 text-sm text-slate-600";
         msg.textContent = "Enviando...";
-      }
 
-      const data = new FormData(form);
+        const data = new FormData(form);
 
-      try {
-        const res = await fetch(FORMSPREE_ENDPOINT, {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: data
-        });
+        // Honeypot anti-spam (si está lleno, es bot)
+        if (data.get("website")) return;
 
-        if (res.ok) {
-          if (msg) {
+        try {
+          const res = await fetch(FORMSPREE_ENDPOINT, {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: data
+          });
+
+          if (res.ok) {
             msg.className = "mt-2 text-sm text-emerald-700";
             msg.textContent = "Listo. Estás en la lista de espera.";
-          }
-          form.reset();
-        } else {
-          if (msg) {
+            form.reset();
+          } else {
             msg.className = "mt-2 text-sm text-red-700";
             msg.textContent = "No se pudo enviar. Probá de nuevo en unos minutos.";
           }
-        }
-      } catch (err) {
-        if (msg) {
+        } catch (err) {
           msg.className = "mt-2 text-sm text-red-700";
           msg.textContent = "Error de red. Verificá tu conexión.";
         }
-      }
-    });
-  }
-</script>
+      });
+    }
+  </script>
 
 </body>
 </html>
+
 
 
 
