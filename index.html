@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kelo Coach | Fútbol Infantil y Formación para Entrenadores</title>
+  <meta name="description" content="Formación práctica para formadores y entrenadores de fútbol infantil (4–12). Profesor Nacional de Educación Física · Entrenador Licencia A ATFA · Preparador Físico de Fútbol." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://kelocoach.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kelo Coach | Fútbol Infantil y Formación para Entrenadores" />
+  <meta property="og:description" content="Formación práctica para formadores y entrenadores de fútbol infantil (4–12). Lista de espera abierta." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kelocoach.com/" />
+  <meta property="og:image" content="https://kelocoach.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (perfecto para landing rápida) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50:  '#eef7ff',
+              100: '#d9ecff',
+              200: '#b9dcff',
+              300: '#87c5ff',
+              400: '#4aa6ff',
+              500: '#1d86ff',
+              600: '#0b67d1',
+              700: '#0a52a3',
+              800: '#0b447f',
+              900: '#0b3866'
+            },
+            accent: { 500: '#22c55e' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+  <!-- Config rápida de links (ya cargados con tus datos) -->
+  <script>
+    // WhatsApp: wa.me requiere número sin +, sin espacios.
+    // Tu número: +54 9 1123901640 -> 5491123901640
+    window.KC = {
+      whatsapp: "https://wa.me/5491123901640",
+      instagram: "https://instagram.com/kelocoach",
+      youtube: "https://www.youtube.com/kelocoach" // si tu URL real difiere, la cambiás acá
+    }
+  </script>
+
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-2">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-900 text-white font-extrabold">K</span>
+        <span class="font-semibold tracking-tight">Kelo Coach</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+        <a class="hover:text-slate-900" href="#sobre-mi">Quién soy</a>
+        <a class="hover:text-slate-900" href="#proximamente">Próximamente</a>
+        <a class="hover:text-slate-900" href="#lista">Lista de espera</a>
+        <a class="hover:text-slate-900" href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#lista"
+         class="inline-flex items-center justify-center rounded-xl bg-brand-900 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-800 transition">
+        Unirme a la lista
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-50 via-white to-slate-50"></div>
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-200/40 blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl"></div>
+
+    <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600">
+            Academia online (en construcción) · Lanzamiento por etapas
+          </p>
+
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+            Formación práctica para entrenadores de <span class="text-brand-800">fútbol infantil</span>
+          </h1>
+
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            Contenido aplicable a cancha: metodología, técnica, táctica inicial, preparación física integrada y pedagogía para edades 4–12.
+          </p>
+
+          <div class="mt-5 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+            <p class="font-semibold text-slate-900">Credenciales</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Profesor Nacional de Educación Física</li>
+              <li>• Entrenador Licencia A ATFA</li>
+              <li>• Preparador Físico de Fútbol</li>
+            </ul>
+          </div>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#lista"
+               class="inline-flex items-center justify-center rounded-xl bg-brand-900 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-800 transition">
+              Quiero entrar a la lista de espera
+            </a>
+            <a href="#proximamente"
+               class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition">
+              Ver roadmap de cursos
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-slate-500">
+            Nota: formación práctica sin acreditación oficial (no equivale a titulación ATFA).
+          </p>
+        </div>
+
+        <!-- Card visual con tu foto -->
+        <div class="relative">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <img
+                src="/kelo-portrait-640.webp"
+                alt="Kelo Coach"
+                class="h-20 w-20 rounded-2xl object-cover border border-slate-200"
+                loading="eager"
+              />
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Kelo Coach</p>
+                <p class="text-sm text-slate-600">Formación para entrenadores y formadores</p>
+                <div class="mt-2 inline-flex items-center gap-2 text-xs rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-1">
+                  Lista de espera abierta
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 grid gap-3">
+              <div class="rounded-2xl border border-slate-200 p-4">
+                <p class="font-semibold">Lecciones con video</p>
+                <p class="text-sm text-slate-600 mt-1">Explicación clara + demostración aplicada.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4">
+                <p class="font-semibold">PDFs descargables</p>
+                <p class="text-sm text-slate-600 mt-1">Plantillas de sesión, progresiones y rúbricas.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4">
+                <p class="font-semibold">Quizzes y progreso</p>
+                <p class="text-sm text-slate-600 mt-1">Evaluaciones cortas para consolidar aprendizaje.</p>
+              </div>
+            </div>
+
+            <div class="mt-5 rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-sm font-semibold text-slate-900">¿Querés enterarte primero?</p>
+              <p class="text-sm text-slate-600 mt-1">Sumate a la lista y te aviso apenas esté disponible el primer curso.</p>
+              <a href="#lista" class="mt-3 inline-flex w-full items-center justify-center rounded-xl bg-accent-500 px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition">
+                Unirme ahora
+              </a>
+            </div>
+          </div>
+
+          <div class="absolute -z-10 -bottom-6 -right-6 h-40 w-40 rounded-3xl bg-brand-100 blur-2xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="sobre-mi" class="mx-auto max-w-6xl px-4 py-14">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="md:col-span-1">
+        <h2 class="text-2xl font-extrabold tracking-tight">Quién soy</h2>
+        <p class="mt-2 text-slate-600">
+          Me enfoco en formación para entrenadores y formadores que trabajan con fútbol infantil y necesitan herramientas prácticas, claras y aplicables.
+        </p>
+
+        <div class="mt-4 flex gap-3">
+          <a class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+             href="#" onclick="this.href=window.KC.instagram" target="_blank" rel="noopener">
+            Instagram
+          </a>
+          <a class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+             href="#" onclick="this.href=window.KC.youtube" target="_blank" rel="noopener">
+            YouTube
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="font-semibold">Enfoque práctico</p>
+          <p class="mt-2 text-sm text-slate-600">Menos teoría suelta, más decisiones de cancha: consignas, progresiones, correcciones y dosificación.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="font-semibold">Metodología y pedagogía</p>
+          <p class="mt-2 text-sm text-slate-600">Cómo enseñar, cómo comunicar y cómo organizar sesiones según edad y nivel.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="font-semibold">Planificación</p>
+          <p class="mt-2 text-sm text-slate-600">Plantillas semanales/mensuales y criterios simples para evaluar progreso.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="font-semibold">Calidad antes que volumen</p>
+          <p class="mt-2 text-sm text-slate-600">Cursos por etapas. Primero: un curso sólido, completo y terminable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="proximamente" class="bg-white border-y border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <h2 class="text-2xl font-extrabold tracking-tight">Próximamente</h2>
+          <p class="mt-2 text-slate-600">Lanzamiento por cursos (pago único). Luego, si hay demanda, se evalúa membresía.</p>
+        </div>
+        <a href="#lista" class="text-sm font-semibold text-brand-800 hover:text-brand-900">Quiero que me avises →</a>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-4">
+        <div class="rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs text-slate-500">Curso 1</p>
+          <p class="mt-1 font-semibold">Fútbol Infantil 4–6</p>
+          <p class="mt-2 text-sm text-slate-600">Iniciación, juego, coordinación, atención y motivación.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs text-slate-500">Curso 2 (MVP recomendado)</p>
+          <p class="mt-1 font-semibold">Fútbol Infantil 7–9</p>
+          <p class="mt-2 text-sm text-slate-600">Técnica base, juegos reducidos, metodología y planificación simple.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs text-slate-500">Curso 3</p>
+          <p class="mt-1 font-semibold">Fútbol Infantil 10–12</p>
+          <p class="mt-2 text-sm text-slate-600">Táctica inicial, PF integrada, dosificación y evaluación.</p>
+        </div>
+        <div class="rounded-2xl border border-brand-200 bg-brand-50 p-5">
+          <p class="text-xs text-brand-700">Programa completo</p>
+          <p class="mt-1 font-semibold text-brand-900">“Especialista en Fútbol Infantil”</p>
+          <p class="mt-2 text-sm text-brand-800">Bundle con bonus (plantillas + rúbricas + biblioteca de juegos).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section id="lista" class="mx-auto max-w-6xl px-4 py-14">
+    <div class="grid gap-10 md:grid-cols-2 md:items-center">
+      <div>
+        <h2 class="text-2xl font-extrabold tracking-tight">Lista de espera</h2>
+        <p class="mt-2 text-slate-600">
+          Dejame tu email y te aviso cuando salga el primer curso. También voy a mandar recursos gratuitos de vez en cuando (sin spam).
+        </p>
+
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li>• Aviso de lanzamiento + cupos/promos iniciales</li>
+          <li>• Plantillas descargables (sesión, rúbrica, checklist)</li>
+          <li>• Artículos del blog (liderazgo, enseñanza, metodología)</li>
+        </ul>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <form id="waitlistForm" class="space-y-4">
+          <div>
+            <label class="text-sm font-semibold text-slate-800" for="email">Email</label>
+            <input id="email" name="email" type="email" required
+                   placeholder="tuemail@ejemplo.com"
+                   class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-brand-100" />
+          </div>
+
+          <div>
+            <label class="text-sm font-semibold text-slate-800" for="nombre">Nombre (opcional)</label>
+            <input id="nombre" name="nombre" type="text"
+                   placeholder="Tu nombre"
+                   class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-brand-100" />
+          </div>
+
+          <button type="submit"
+                  class="w-full rounded-xl bg-brand-900 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-800 transition">
+            Unirme a la lista
+          </button>
+
+          <p id="formMsg" class="hidden text-sm"></p>
+        </form>
+
+        <div class="mt-4">
+          <a href="#"
+             onclick="this.href=window.KC.whatsapp + '?text=' + encodeURIComponent('Hola Kelo, quiero sumarme a la lista de espera.')"
+             class="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition"
+             target="_blank" rel="noopener">
+            Prefiero que me avises por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contacto" class="bg-white border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 py-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+      <div>
+        <p class="font-semibold">Kelo Coach</p>
+        <p class="text-sm text-slate-600">Fútbol infantil · Formación para entrenadores · Recursos aplicables</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+           href="#" onclick="this.href=window.KC.instagram" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        <a class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+           href="#" onclick="this.href=window.KC.youtube" target="_blank" rel="noopener">
+          YouTube
+        </a>
+        <a class="rounded-xl bg-accent-500 px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+           href="#" onclick="this.href=window.KC.whatsapp + '?text=' + encodeURIComponent('Hola Kelo, quiero hacerte una consulta.')"
+           target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-6xl px-4 pb-10">
+      <p class="text-xs text-slate-500">
+        © <span id="year"></span> Kelo Coach. Formación no oficial (sin acreditación legal). Todos los derechos reservados.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Conectar lista de espera (opcional) con Formspree:
+    // 1) Creás un form en Formspree -> te da un endpoint tipo https://formspree.io/f/abcdwxyz
+    // 2) Pegás ese endpoint acá:
+    const FORMSPREE_ENDPOINT = ""; // <-- pegalo aquí cuando lo tengas
+
+    const form = document.getElementById('waitlistForm');
+    const msg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.classList.remove('hidden');
+
+      if (!FORMSPREE_ENDPOINT) {
+        msg.className = "mt-2 text-sm text-amber-700";
+        msg.textContent = "Formulario aún no conectado. Decime si querés que lo conectemos a Formspree o Google Forms.";
+        return;
+      }
+
+      msg.className = "mt-2 text-sm text-slate-600";
+      msg.textContent = "Enviando...";
+
+      const data = new FormData(form);
+      try {
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: data
+        });
+
+        if (res.ok) {
+          msg.className = "mt-2 text-sm text-emerald-700";
+          msg.textContent = "Listo. Estás en la lista de espera.";
+          form.reset();
+        } else {
+          msg.className = "mt-2 text-sm text-red-700";
+          msg.textContent = "No se pudo enviar. Probá de nuevo en unos minutos.";
+        }
+      } catch (err) {
+        msg.className = "mt-2 text-sm text-red-700";
+        msg.textContent = "Error de red. Verificá tu conexión.";
+      }
+    });
+  </script>
+</body>
+</html>
