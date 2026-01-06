@@ -299,6 +299,10 @@
                    placeholder="Tu nombre"
                    class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:ring-4 focus:ring-brand-100" />
           </div>
+          <div class="hidden">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
 
           <button type="submit"
                   class="w-full rounded-xl bg-brand-900 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-800 transition">
@@ -377,6 +381,7 @@
       msg.textContent = "Enviando...";
 
       const data = new FormData(form);
+      if (data.get("website")) return;
       try {
         const res = await fetch(FORMSPREE_ENDPOINT, {
           method: "POST",
@@ -446,5 +451,6 @@
 
 </body>
 </html>
+
 
 
