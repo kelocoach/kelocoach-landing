@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelo Coach | Evoluciona tu Enseñanza</title>
+  
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kelocoach.com/">
-  <meta property="og:title" content="Kelo Coach | Formación de Elite para Entrenadores">
-  <meta property="og:description" content="Evoluciona tu metodología. Cursos, mentorías y recursos para el fútbol formativo y de alto rendimiento.">
+  <meta property="og:title" content="Kelo Coach | Formación de Elite">
+  <meta property="og:description" content="Metodología, táctica y liderazgo para entrenadores de fútbol.">
   <meta property="og:image" content="https://tu-url-de-vercel.app/20240508035815_IMG_9376.jpg"> 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,41 +31,31 @@
   </script>
 
   <style>
-    .glass-nav {
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
+    /* El nav ya no tiene color fijo, lo maneja el JS */
     .hero-animate { animation: fadeIn 1.5s ease-out; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-     
-    /* Animación del botón flotante */
     .float-btn { animation: float 3s ease-in-out infinite; }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0px); }
-    }
+    @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0px); } }
   </style>
 </head>
 
-<body class="bg-slate-900 text-white font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-slate-900 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-slate-900 font-black text-xl shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+        <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-slate-900 font-black text-xl shadow-lg">
           <i class="fa-solid fa-futbol"></i>
         </div>
-        <span class="font-bold text-xl tracking-wide">KELO<span class="text-brand-400">COACH</span></span>
+        <span class="font-bold text-xl tracking-wide text-white">KELO<span class="text-brand-400">COACH</span></span>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-        <a href="#roadmap" class="hover:text-white transition">CURSOS</a>
-        <a href="#blog" class="hover:text-white transition">BLOG</a>
-        <a href="#faq" class="hover:text-white transition">DUDAS</a> 
-        <a href="#waitlist" class="hover:text-white transition">ACCESO ALUMNOS</a>
-        <a href="#waitlist" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-slate-900 transition border border-slate-700">
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-white/90">
+        <a href="#roadmap" class="hover:text-brand-400 transition">CURSOS</a>
+        <a href="#blog" class="hover:text-brand-400 transition">BLOG</a>
+        <a href="#faq" class="hover:text-brand-400 transition">DUDAS</a> 
+        <a href="#waitlist" class="hover:text-brand-400 transition">ACCESO ALUMNOS</a>
+        <a href="#waitlist" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center hover:bg-brand-500 hover:text-slate-900 transition border border-white/10">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
       </div>
@@ -74,65 +65,65 @@
   <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img src="20240508035815_IMG_9376.jpg" class="w-full h-full object-cover hero-animate" alt="Kelo Coach">
-      <div class="absolute inset-0 bg-slate-900/90 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/60"></div>
+      <div class="absolute inset-0 bg-slate-900/85 bg-gradient-to-t from-slate-900 via-slate-900/70 to-slate-900/50"></div>
     </div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-10" data-aos="zoom-out-up">
-      <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-tight mb-6 drop-shadow-2xl">
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-tight mb-6 drop-shadow-2xl text-white">
         Evoluciona tu <br/>
         <span class="text-brand-400">Poder de Enseñanza</span>
       </h1>
-      <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+      <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
         Acompañando a Profes a mejorar sus cualidades en la enseñanza, planificación y trabajo estratégico en el fútbol formativo.
       </p>
       <div class="flex flex-col sm:flex-row gap-5 justify-center">
         <a href="#blog" class="px-8 py-4 bg-brand-500 text-slate-900 rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-brand-400 hover:scale-105 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]">
           Leer Artículos
         </a>
-        <a href="#roadmap" class="px-8 py-4 bg-white/5 border border-white/20 text-white rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-white/10 hover:border-white/40 transition backdrop-blur-sm flex items-center justify-center gap-2">
+        <a href="#roadmap" class="px-8 py-4 bg-white/10 border border-white/20 text-white rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-white/20 transition backdrop-blur-sm flex items-center justify-center gap-2">
           <i class="fa-solid fa-bolt text-yellow-400"></i> Ver Roadmap
         </a>
       </div>
     </div>
   </header>
 
-  <section id="roadmap" class="py-24 bg-slate-900 border-t border-slate-800">
+  <section id="roadmap" class="py-24 bg-slate-50 relative">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
-        <span class="text-brand-400 font-bold tracking-widest text-xs uppercase">Metodología Kelo</span>
-        <h2 class="text-4xl font-black text-white mt-2">Roadmap de Formación</h2>
+        <span class="text-brand-600 font-bold tracking-widest text-xs uppercase">Metodología Kelo</span>
+        <h2 class="text-4xl font-black text-slate-900 mt-2">Roadmap de Formación</h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-brand-500 transition group hover:-translate-y-2 duration-300">
-          <div class="w-14 h-14 bg-slate-700/50 rounded-2xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-slate-900 transition">
+        <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-brand-500 transition group hover:-translate-y-2 duration-300">
+          <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-brand-500 text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition">
             <i class="fa-solid fa-shapes"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Iniciación (4-6 años)</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">El arte del descubrimiento. Juegos lúdicos y coordinación básica.</p>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Iniciación (4-6 años)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">El arte del descubrimiento. Juegos lúdicos y coordinación básica.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl border border-brand-500/30 relative hover:-translate-y-2 transition duration-300 shadow-[0_0_30px_rgba(16,185,129,0.1)]">
-          <div class="absolute top-4 right-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-2 py-1 rounded">MVP</div>
-          <div class="w-14 h-14 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-400 text-2xl mb-6">
+        <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-brand-500/10 border-2 border-brand-500 relative hover:-translate-y-2 transition duration-300">
+          <div class="absolute top-4 right-4 bg-brand-500 text-white text-[10px] font-bold px-2 py-1 rounded">MVP</div>
+          <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6">
             <i class="fa-solid fa-trophy"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">Formación (7-12 años)</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Técnica, táctica individual y principios de juego. La base del futbolista moderno.</p>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Formación (7-12 años)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Técnica, táctica individual y principios de juego. La base del futbolista moderno.</p>
         </div>
 
-        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-brand-500 transition group hover:-translate-y-2 duration-300">
-          <div class="w-14 h-14 bg-slate-700/50 rounded-2xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-slate-900 transition">
+        <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-brand-500 transition group hover:-translate-y-2 duration-300">
+          <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-brand-500 text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition">
             <i class="fa-solid fa-clipboard-user"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3">Gestión de Grupo</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Liderazgo, comunicación con padres y planificación.</p>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Gestión de Grupo</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Liderazgo, comunicación con padres y planificación.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="blog" class="py-24 bg-slate-950 relative">
+  <section id="blog" class="py-24 bg-slate-900 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-emerald-500 font-bold mb-2 uppercase tracking-widest text-xs">Kelo Academy</h2>
@@ -146,31 +137,31 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <article class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
+        <article class="bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
             <div class="relative h-48 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Resúmenes</span>
             </div>
             <div class="p-6">
-                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Liderazgo en el Vestuario: El Legado de los All Blacks</h4>
+                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Liderazgo en el Vestuario</h4>
                 <p class="text-slate-400 text-sm line-clamp-2 mt-2">Lecciones de humildad y excelencia aplicadas al fútbol.</p>
                 <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
             </div>
         </article>
 
-        <article class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
+        <article class="bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
             <div class="relative h-48 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Metodología</span>
             </div>
             <div class="p-6">
-                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Métodos de Enseñanza: ¿Descubrimiento o Mando?</h4>
+                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">¿Descubrimiento o Mando?</h4>
                 <p class="text-slate-400 text-sm line-clamp-2 mt-2">Análisis de estilos para fomentar jugadores inteligentes.</p>
                 <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
             </div>
         </article>
 
-        <article class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
+        <article class="bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
             <div class="relative h-48 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1543326727-25e5508a287c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Psicología</span>
@@ -185,51 +176,51 @@
     </div>
   </section>
 
-  <section class="py-24 bg-slate-900 relative border-t border-slate-800">
+  <section class="py-24 bg-slate-50 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-brand-400 font-bold mb-2 uppercase tracking-widest text-xs">Comunidad</h2>
-        <h3 class="text-3xl md:text-4xl font-bold text-white">Lo que dicen los Profes</h3>
+        <h2 class="text-brand-600 font-bold mb-2 uppercase tracking-widest text-xs">Comunidad</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Lo que dicen los Profes</h3>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-slate-800 p-8 rounded-3xl relative">
-          <i class="fa-solid fa-quote-left text-4xl text-brand-500/20 absolute top-6 left-6"></i>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6 relative z-10">
+        <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-200 absolute top-6 left-6"></i>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6 relative z-10 font-medium">
             "Cambió mi forma de planificar la semana. Antes improvisaba mucho, ahora tengo una estructura clara que ahorra mucho tiempo."
           </p>
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold text-brand-400">JM</div>
+            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-brand-600">JM</div>
             <div>
-              <h5 class="text-white font-bold text-sm">Lean</h5>
+              <h5 class="text-slate-900 font-bold text-sm">Lean</h5>
               <p class="text-xs text-slate-500">DT Sub-12</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-slate-800 p-8 rounded-3xl relative">
-          <i class="fa-solid fa-quote-left text-4xl text-brand-500/20 absolute top-6 left-6"></i>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6 relative z-10">
+        <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-200 absolute top-6 left-6"></i>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6 relative z-10 font-medium">
             "El enfoque en la mente de los chicos es lo que más valoro. Kelo no solo enseña lo técnico, enseña a liderar a los niños."
           </p>
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold text-brand-400">LP</div>
+            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-brand-600">LP</div>
             <div>
-              <h5 class="text-white font-bold text-sm">Lucas Pérez</h5>
+              <h5 class="text-slate-900 font-bold text-sm">Lucas Pérez</h5>
               <p class="text-xs text-slate-500">Coordinador Juvenil</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-slate-800 p-8 rounded-3xl relative">
-          <i class="fa-solid fa-quote-left text-4xl text-brand-500/20 absolute top-6 left-6"></i>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6 relative z-10">
-            "El material de primera calidad. Los ejercicios de la etapa de iniciación son oro puro para mantener a los chicos enganchados entrenando."
+        <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-200 absolute top-6 left-6"></i>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6 relative z-10 font-medium">
+            "El material de primera calidad. Los ejercicios de la etapa de iniciación son oro puro para mantener a los chicos enganchados."
           </p>
           <div class="flex items-center gap-4">
-            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold text-brand-400">SG</div>
+            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-brand-600">SG</div>
             <div>
-              <h5 class="text-white font-bold text-sm">Nico</h5>
+              <h5 class="text-slate-900 font-bold text-sm">Nico</h5>
               <p class="text-xs text-slate-500">Profe Escuelita</p>
             </div>
           </div>
@@ -254,7 +245,7 @@
             </span>
           </summary>
           <div class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-4">
-            Inmediatamente después del pago recibirás un email con tus credenciales de acceso a nuestra plataforma privada. Todo el contenido es 100% online y a tu ritmo.
+            Inmediatamente después del pago recibirás un email con tus credenciales. Todo el contenido es 100% online.
           </div>
         </details>
 
@@ -266,7 +257,7 @@
             </span>
           </summary>
           <div class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-4">
-            Sí, nuestras mentorías 1 a 1 incluyen un análisis de tu contexto actual (equipo, categoría, recursos) para crear una planificación a medida.
+            Sí, nuestras mentorías 1 a 1 incluyen un análisis de tu contexto actual para crear una planificación a medida.
           </div>
         </details>
 
@@ -278,25 +269,25 @@
             </span>
           </summary>
           <div class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-4">
-            Aceptamos tarjetas de débito y crédito (Visa, Mastercard), PayPal y Transferencia Bancaria (para residentes en Argentina).
+            Aceptamos tarjetas de débito y crédito (Visa, Mastercard), PayPal y Transferencia Bancaria (Argentina).
           </div>
         </details>
       </div>
     </div>
   </section>
 
-  <section id="waitlist" class="py-24 bg-slate-900 relative overflow-hidden border-t border-slate-800">
+  <section id="waitlist" class="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-900">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[100px]"></div>
     <div class="max-w-3xl mx-auto px-4 relative z-10 text-center">
-      <div class="bg-slate-800/80 backdrop-blur border border-slate-700 p-10 md:p-14 rounded-[3rem] shadow-2xl">
-        <h2 class="text-3xl md:text-4xl font-black mb-4">Únete a la Lista de Espera</h2>
+      <div class="bg-slate-900/80 backdrop-blur border border-slate-800 p-10 md:p-14 rounded-[3rem] shadow-2xl">
+        <h2 class="text-3xl md:text-4xl font-black mb-4 text-white">Únete a la Lista de Espera</h2>
         <p class="text-slate-400 mb-8">Sé el primero en enterarte del lanzamiento y accede a recursos exclusivos.</p>
 
         <form id="waitlistForm" class="space-y-4 max-w-sm mx-auto">
           <input type="email" name="email" required placeholder="tu@email.com" 
-            class="w-full px-6 py-4 bg-slate-900 border border-slate-700 rounded-xl text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition text-center placeholder-slate-600">
+            class="w-full px-6 py-4 bg-slate-950 border border-slate-800 rounded-xl text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition text-center placeholder-slate-600">
           <input type="text" name="nombre" placeholder="Tu nombre" 
-            class="w-full px-6 py-4 bg-slate-900 border border-slate-700 rounded-xl text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition text-center placeholder-slate-600">
+            class="w-full px-6 py-4 bg-slate-950 border border-slate-800 rounded-xl text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition text-center placeholder-slate-600">
           <input type="text" name="website" class="hidden">
           <button type="submit" class="w-full py-4 bg-brand-500 text-slate-900 font-bold rounded-xl hover:bg-brand-400 transition transform active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
             AVISAME CUANDO SALGA 🚀
@@ -307,14 +298,14 @@
     </div>
   </section>
 
-  <footer class="bg-dark-950 pt-20 pb-10 border-t border-slate-900">
+  <footer class="bg-dark-950 pt-20 pb-10 border-t border-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div class="md:col-span-2 space-y-6">
             <a href="#" class="flex items-center gap-2 group">
                 <div class="w-8 h-8 bg-brand-500 rounded flex items-center justify-center text-slate-900 font-bold">
                   <i class="fa-solid fa-futbol"></i>
                 </div>
-                <span class="font-bold text-xl tracking-tight text-white">KELO<span class="text-brand-500">COACH</span></span>
+                <span class="font-bold text-xl tracking-tight">KELO<span class="text-brand-500">COACH</span></span>
             </a>
             <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
                 Empoderando a formadores para alcanzar la excelencia en la enseñanza, 
@@ -326,7 +317,7 @@
             </div>
         </div>
         <div>
-            <h4 class="text-white font-bold mb-6">Enlaces Rápidos</h4>
+            <h4 class="font-bold mb-6">Enlaces Rápidos</h4>
             <ul class="space-y-4 text-slate-400 text-sm">
                 <li><a href="#" class="hover:text-brand-500 transition">Inicio</a></li>
                 <li><a href="#roadmap" class="hover:text-brand-500 transition">Servicios</a></li>
@@ -335,7 +326,7 @@
             </ul>
         </div>
         <div>
-            <h4 class="text-white font-bold mb-6">Contacto</h4>
+            <h4 class="font-bold mb-6">Contacto</h4>
             <ul class="space-y-4 text-slate-400 text-sm">
                 <li class="flex items-center gap-3">
                     <i class="fa-regular fa-envelope text-brand-500"></i>
@@ -374,6 +365,18 @@
       instagram: "https://instagram.com/kelocoach",
       youtube: "https://www.youtube.com/@Kelocoach"
     }
+
+    // 🔥 LOGICA DEL MENÚ DINÁMICO 🔥
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'shadow-md', 'py-2');
+            navbar.classList.remove('py-4');
+        } else {
+            navbar.classList.remove('bg-slate-900/90', 'backdrop-blur-md', 'shadow-md', 'py-2');
+            navbar.classList.add('py-4');
+        }
+    });
   </script>
 
   <script type="module">
@@ -381,9 +384,9 @@
     import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
-    // ⬇️⬇️ TUS CLAVES ORIGINALES ⬇️⬇️
+    // ⬇️⬇️ PEGA AQUÍ TUS CLAVES ⬇️⬇️
     const firebaseConfig = {
-      apiKey: "AIzaSyC5ahEC4TizADQFurFWPfp1GNUz479oV1Q",
+     apiKey: "AIzaSyC5ahEC4TizADQFurFWPfp1GNUz479oV1Q",
       authDomain: "kelo-coach-web.firebaseapp.com",
       projectId: "kelo-coach-web",
       storageBucket: "kelo-coach-web.firebasestorage.app",
@@ -391,6 +394,7 @@
       appId: "1:923103040140:web:a84e31b6dee5d77cba21a9",
       measurementId: "G-PSLYSHYXBY"
     };
+    // ⬆️⬆️ ----------------------- ⬆️⬆️
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
@@ -416,7 +420,7 @@
             email: formData.get('email'),
             nombre: formData.get('nombre'),
             fecha: serverTimestamp(),
-            origen: "web_dark_v6_faq"
+            origen: "web_dynamic_v8"
           });
           msg.classList.remove('hidden');
           msg.innerHTML = '¡REGISTRADO! GRACIAS PROFE.';
@@ -433,3 +437,4 @@
   </script>
 </body>
 </html>
+
