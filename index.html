@@ -1,37 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Kelo Coach | Formación de Fútbol Infantil</title>
-  <meta name="description" content="Formación práctica para entrenadores de fútbol infantil. Sin teoría aburrida, directo a la cancha. Licencia A ATFA." />
-  <meta name="author" content="Kelo Coach">
-  <link rel="icon" href="https://fav.farm/⚽" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.kelocoach.com/" />
-  <meta property="og:title" content="Kelo Coach | Formación de Fútbol Infantil" />
-  <meta property="og:description" content="Ayudo a profes y entrenadores a organizar sus entrenamientos con metodología real y práctica. Únete a la lista de espera." />
-  <meta property="og:image" content="kelo-portrait-640.jpg" /> <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>Kelo Coach | Evoluciona tu Enseñanza</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kelocoach.com/">
+  <meta property="og:title" content="Kelo Coach | Formación de Elite para Entrenadores">
+  <meta property="og:description" content="Evoluciona tu metodología. Cursos, mentorías y recursos para el fútbol formativo y de alto rendimiento.">
+  <meta property="og:image" content="https://tu-url-de-vercel.app/20240508035815_IMG_9376.jpg"> <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: {
-            brand: {
-              50:  '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
-              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
-              800: '#1e40af', 900: '#1e3a8a'
-            },
-            accent: { 500: '#10b981', 600: '#059669' } // Verde Esmeralda
+            brand: { 400: '#34d399', 500: '#10b981', 600: '#059669' }, /* Esmeralda */
+            dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' }
           }
         }
       }
@@ -39,339 +29,371 @@
   </script>
 
   <style>
-    /* Estilos Personalizados */
     .glass-nav {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(15, 23, 42, 0.85);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
+    .hero-animate { animation: fadeIn 1.5s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     
-    .text-gradient {
-      background: linear-gradient(135deg, #1d4ed8 0%, #10b981 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-
-    .btn-primary {
-      background: linear-gradient(to right, #2563eb, #10b981);
-      transition: all 0.3s ease;
-    }
-    .btn-primary:hover {
-      filter: brightness(110%);
-      transform: translateY(-1px);
-      box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
-    }
-
-    /* Ajuste para la imagen de fondo en móviles */
-    .hero-bg {
-        background-image: url('20240508035815_IMG_9376.JPG'); /* TU FOTO REAL AQUÍ */
-        background-size: cover;
-        background-position: center;
+    /* Animación del botón flotante */
+    .float-btn { animation: float 3s ease-in-out infinite; }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 selection:text-brand-900">
+<body class="bg-slate-900 text-white font-sans antialiased selection:bg-brand-500 selection:text-white">
 
+  <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-slate-900 font-black text-xl shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <span class="font-bold text-xl tracking-wide">KELO<span class="text-brand-400">COACH</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#roadmap" class="hover:text-white transition">CURSOS</a>
+        <a href="#blog" class="hover:text-white transition">BLOG</a>
+        <section class="py-24 bg-slate-900 relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-brand-400 font-bold mb-2 uppercase tracking-widest text-xs">Comunidad</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-white">Lo que dicen los Profes</h3>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-slate-800 p-8 rounded-3xl relative">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-500/20 absolute top-6 left-6"></i>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6 relative z-10">
+            "Cambió mi forma de planificar la semana. Antes improvisaba mucho, ahora tengo una estructura clara que ahorra mucho tiempo."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold text-brand-400">JM</div>
+            <div>
+              <h5 class="text-white font-bold text-sm">Lean</h5>
+              <p class="text-xs text-slate-500">DT Sub-12</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 p-8 rounded-3xl relative">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-500/20 absolute top-6 left-6"></i>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6 relative z-10">
+            "El enfoque en la mente de los chicos es lo que más valoro. Kelo no solo enseña lo técnico, enseña a liderar a los niños."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold text-brand-400">LP</div>
+            <div>
+              <h5 class="text-white font-bold text-sm">Lucas Pérez</h5>
+              <p class="text-xs text-slate-500">Coordinador Juvenil</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 p-8 rounded-3xl relative">
+          <i class="fa-solid fa-quote-left text-4xl text-brand-500/20 absolute top-6 left-6"></i>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6 relative z-10">
+            "El material de primera calidad. Los ejercicios de la etapa de iniciación son oro puro para mantener a los chicos enganchados entrenando."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold text-brand-400">SG</div>
+            <div>
+              <h5 class="text-white font-bold text-sm">Nico</h5>
+              <p class="text-xs text-slate-500">Profe Escuelita</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        <a href="#faq" class="hover:text-white transition">DUDAS</a> <a href="#waitlist" class="hover:text-white transition">ACCESO ALUMNOS</a>
+        <a href="#waitlist" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-slate-900 transition border border-slate-700">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="20240508035815_IMG_9376.jpg" class="w-full h-full object-cover hero-animate" alt="Kelo Coach">
+      <div class="absolute inset-0 bg-slate-900/90 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-10" data-aos="zoom-out-up">
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-tight mb-6 drop-shadow-2xl">
+        Evoluciona tu <br/>
+        <span class="text-brand-400">Poder de Enseñanza</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+        Acompañando a Profes a mejorar sus cualidades en la enseñanza, planificación y trabajo estratégico en el fútbol formativo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#blog" class="px-8 py-4 bg-brand-500 text-slate-900 rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-brand-400 hover:scale-105 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+          Leer Artículos
+        </a>
+        <a href="#roadmap" class="px-8 py-4 bg-white/5 border border-white/20 text-white rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-white/10 hover:border-white/40 transition backdrop-blur-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-bolt text-yellow-400"></i> Ver Roadmap
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="roadmap" class="py-24 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="text-brand-400 font-bold tracking-widest text-xs uppercase">Metodología Kelo</span>
+        <h2 class="text-4xl font-black text-white mt-2">Roadmap de Formación</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-brand-500 transition group hover:-translate-y-2 duration-300">
+          <div class="w-14 h-14 bg-slate-700/50 rounded-2xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-slate-900 transition">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Iniciación (4-6 años)</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">El arte del descubrimiento. Juegos lúdicos y coordinación básica.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl border border-brand-500/30 relative hover:-translate-y-2 transition duration-300 shadow-[0_0_30px_rgba(16,185,129,0.1)]">
+          <div class="absolute top-4 right-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-2 py-1 rounded">MVP</div>
+          <div class="w-14 h-14 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-400 text-2xl mb-6">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">Formación (7-12 años)</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Técnica, táctica individual y principios de juego. La base del futbolista moderno.</p>
+        </div>
+
+        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-brand-500 transition group hover:-translate-y-2 duration-300">
+          <div class="w-14 h-14 bg-slate-700/50 rounded-2xl flex items-center justify-center text-brand-400 text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-slate-900 transition">
+            <i class="fa-solid fa-clipboard-user"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Gestión de Grupo</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Liderazgo, comunicación con padres y planificación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="py-24 bg-slate-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-emerald-500 font-bold mb-2 uppercase tracking-widest text-xs">Kelo Academy</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-white">Blog Educativo</h3>
+        
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+            <span class="px-4 py-2 bg-brand-500 text-slate-900 rounded-full text-xs font-bold cursor-pointer hover:scale-105 transition">Todos</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-400 rounded-full text-xs font-bold cursor-pointer hover:border-brand-500 hover:text-white transition">Metodología</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-400 rounded-full text-xs font-bold cursor-pointer hover:border-brand-500 hover:text-white transition">Liderazgo</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Resúmenes</span>
+            </div>
+            <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Liderazgo en el Vestuario: El Legado de los All Blacks</h4>
+                <p class="text-slate-400 text-sm line-clamp-2 mt-2">Lecciones de humildad y excelencia aplicadas al fútbol.</p>
+                <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Metodología</span>
+            </div>
+            <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Métodos de Enseñanza: ¿Descubrimiento o Mando?</h4>
+                <p class="text-slate-400 text-sm line-clamp-2 mt-2">Análisis de estilos para fomentar jugadores inteligentes.</p>
+                <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1543326727-25e5508a287c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Psicología</span>
+            </div>
+            <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Psicología del Portero</h4>
+                <p class="text-slate-400 text-sm line-clamp-2 mt-2">Resiliencia y mentalidad tras el error.</p>
+                <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
+            </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-24 bg-slate-900 relative">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-brand-400 font-bold mb-2 uppercase tracking-widest text-xs">Ayuda</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-white">Resolvamos tus Dudas</h3>
+      </div>
+      
+      <div class="space-y-4">
+        <details class="group bg-slate-800 rounded-2xl border border-slate-700 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-brand-500/50 transition duration-300">
+          <summary class="flex items-center justify-between font-bold text-white text-lg select-none">
+            ¿Cómo accedo a los cursos tras la compra?
+            <span class="ml-4 bg-slate-900 p-2 rounded-full text-brand-500 transition-transform group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-4">
+            Inmediatamente después del pago recibirás un email con tus credenciales de acceso a nuestra plataforma privada. Todo el contenido es 100% online y a tu ritmo.
+          </div>
+        </details>
+
+        <details class="group bg-slate-800 rounded-2xl border border-slate-700 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-brand-500/50 transition duration-300">
+          <summary class="flex items-center justify-between font-bold text-white text-lg select-none">
+            ¿Los planes de entrenamiento son personalizados?
+            <span class="ml-4 bg-slate-900 p-2 rounded-full text-brand-500 transition-transform group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-4">
+            Sí, nuestras mentorías 1 a 1 incluyen un análisis de tu contexto actual (equipo, categoría, recursos) para crear una planificación a medida.
+          </div>
+        </details>
+
+        <details class="group bg-slate-800 rounded-2xl border border-slate-700 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-brand-500/50 transition duration-300">
+          <summary class="flex items-center justify-between font-bold text-white text-lg select-none">
+            ¿Qué medios de pago aceptan?
+            <span class="ml-4 bg-slate-900 p-2 rounded-full text-brand-500 transition-transform group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-4">
+            Aceptamos tarjetas de débito y crédito (Visa, Mastercard), PayPal y Transferencia Bancaria (para residentes en Argentina).
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="waitlist" class="py-24 bg-slate-900 relative overflow-hidden border-t border-slate-800">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[100px]"></div>
+    <div class="max-w-3xl mx-auto px-4 relative z-10 text-center">
+      <div class="bg-slate-800/80 backdrop-blur border border-slate-700 p-10 md:p-14 rounded-[3rem] shadow-2xl">
+        <h2 class="text-3xl md:text-4xl font-black mb-4">Únete a la Lista de Espera</h2>
+        <p class="text-slate-400 mb-8">Sé el primero en enterarte del lanzamiento y accede a recursos exclusivos.</p>
+
+        <form id="waitlistForm" class="space-y-4 max-w-sm mx-auto">
+          <input type="email" name="email" required placeholder="tu@email.com" 
+            class="w-full px-6 py-4 bg-slate-900 border border-slate-700 rounded-xl text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition text-center placeholder-slate-600">
+          <input type="text" name="nombre" placeholder="Tu nombre" 
+            class="w-full px-6 py-4 bg-slate-900 border border-slate-700 rounded-xl text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition text-center placeholder-slate-600">
+          <input type="text" name="website" class="hidden">
+          <button type="submit" class="w-full py-4 bg-brand-500 text-slate-900 font-bold rounded-xl hover:bg-brand-400 transition transform active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+            AVISAME CUANDO SALGA 🚀
+          </button>
+          <p id="formMsg" class="hidden text-sm font-bold text-brand-400 mt-4 animate-pulse"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark-950 pt-20 pb-10 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="md:col-span-2 space-y-6">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-brand-500 rounded flex items-center justify-center text-slate-900 font-bold">
+                  <i class="fa-solid fa-futbol"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-white">KELO<span class="text-brand-500">COACH</span></span>
+            </a>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                Empoderando a formadores para alcanzar la excelencia en la enseñanza, 
+                planificación y gestión estratégica del fútbol moderno.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" onclick="window.open(window.KC.instagram)" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-slate-900 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" onclick="window.open(window.KC.youtube)" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-white font-bold mb-6">Enlaces Rápidos</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+                <li><a href="#" class="hover:text-brand-500 transition">Inicio</a></li>
+                <li><a href="#roadmap" class="hover:text-brand-500 transition">Servicios</a></li>
+                <li><a href="#blog" class="hover:text-brand-500 transition">Blog Táctico</a></li>
+                <li><a href="#faq" class="hover:text-brand-500 transition">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-white font-bold mb-6">Contacto</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+                <li class="flex items-center gap-3">
+                    <i class="fa-regular fa-envelope text-brand-500"></i>
+                    <span>hola@kelocoach.com</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-location-dot text-brand-500"></i>
+                    <span>Buenos Aires, Argentina</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-brand-500"></i>
+                    <a href="#" onclick="window.open(window.KC.whatsapp)" class="hover:text-white transition">Hablemos por WhatsApp</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>© <span id="year"></span> Kelo Coach. Todos los derechos reservados.</p>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-slate-300">Privacidad</a>
+            <a href="#" class="hover:text-slate-300">Términos</a>
+        </div>
+    </div>
+  </footer>
+
+  <a href="#" onclick="window.open(window.KC.whatsapp)" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center shadow-lg shadow-brand-500/30 hover:bg-brand-400 transition transform hover:scale-110 float-btn">
+      <i class="fa-brands fa-whatsapp text-2xl text-slate-900"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Configuración Global
+    AOS.init({ once: true, offset: 50 });
+    document.getElementById('year').textContent = new Date().getFullYear();
     window.KC = {
-      whatsapp: "https://wa.me/5491123901640", // Revisa que este número sea correcto
+      whatsapp: "https://wa.me/5491123901640", 
       instagram: "https://instagram.com/kelocoach",
       youtube: "https://www.youtube.com/@Kelocoach"
     }
   </script>
 
-  <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300 shadow-sm">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#inicio" class="flex items-center gap-2 group">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-900 text-white font-extrabold group-hover:bg-accent-500 transition-colors shadow-sm">K</span>
-        <span class="font-bold tracking-tight text-slate-800 group-hover:text-brand-700 transition-colors">Kelo Coach</span>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a class="hover:text-brand-600 transition" href="#sobre-mi">Quién soy</a>
-        <a class="hover:text-brand-600 transition" href="#proximamente">Roadmap</a>
-        <a class="hover:text-brand-600 transition" href="#lista">Lista de Espera</a>
-      </nav>
-
-      <a href="#lista" class="inline-flex items-center justify-center rounded-lg btn-primary px-5 py-2 text-sm font-bold text-white shadow-md hover:shadow-lg transition-all">
-        Unirme ahora
-      </a>
-    </div>
-  </header>
-
-  <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-    <div class="absolute inset-0 -z-10">
-        <div class="absolute inset-0 hero-bg opacity-20 grayscale-[20%]"></div> <div class="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/80 to-slate-50"></div>
-    </div>
-
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <div class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-brand-700 mb-6 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-            Academia en construcción · Lanzamiento 2026
-          </div>
-          
-          <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 mb-6">
-            Formación práctica para el <span class="text-gradient">Fútbol Infantil</span>
-          </h1>
-          
-          <p class="text-lg text-slate-700 leading-relaxed mb-8 font-medium">
-            Contenido aplicable sobre metodología, técnica y pedagogía para niños de 4 a 12 años. <br>
-            <span class="bg-yellow-100 text-yellow-800 px-1 rounded">Sin teoría aburrida</span>, directo a lo que pasa en la cancha.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#lista" class="btn-primary rounded-xl px-8 py-4 text-center text-white font-bold shadow-lg hover:shadow-brand-500/30 transition transform hover:-translate-y-1">
-              Entrar a la Lista de Espera
-            </a>
-            <a href="#proximamente" class="rounded-xl px-8 py-4 text-center border border-slate-300 bg-white/80 backdrop-blur text-slate-700 font-bold hover:bg-white hover:border-slate-400 transition shadow-sm">
-              Ver Roadmap
-            </a>
-          </div>
-
-          <div class="mt-8 flex flex-wrap items-center gap-4 text-xs font-bold text-slate-600">
-            <span class="flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200"><i class="fas fa-check-circle text-accent-500"></i> Prof. Ed. Física</span>
-            <span class="flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200"><i class="fas fa-check-circle text-accent-500"></i> Licencia A ATFA</span>
-            <span class="flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200"><i class="fas fa-check-circle text-accent-500"></i> PF Fútbol</span>
-          </div>
-        </div>
-
-        <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-            <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-accent-500 rounded-2xl opacity-20 blur-2xl"></div>
-            
-            <div class="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-                <div class="flex items-start gap-4">
-                    <img src="kelo-portrait-400.webp" 
-                         alt="Kelo Coach" 
-                         class="w-20 h-20 rounded-2xl object-cover ring-4 ring-brand-100 shadow-md">
-                    
-                    <div>
-                        <h3 class="font-bold text-slate-900 text-lg">Kelo Coach</h3>
-                        <p class="text-slate-500 text-sm mb-2">Formador de Entrenadores</p>
-                        <a href="https://www.linkedin.com" target="_blank" class="inline-block bg-brand-50 hover:bg-brand-100 text-brand-700 border border-brand-200 text-xs px-2 py-1 rounded font-bold transition">
-                          <i class="fab fa-linkedin"></i> Conectar
-                        </a>
-                    </div>
-                </div>
-                
-                <hr class="my-5 border-slate-100">
-
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 group hover:border-brand-200 transition">
-                        <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center group-hover:scale-110 transition"><i class="fas fa-video"></i></div>
-                        <div class="text-sm">
-                            <p class="font-bold text-slate-900">Lecciones en Video</p>
-                            <p class="text-slate-500 text-xs">Análisis táctico y correcciones reales.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 group hover:border-brand-200 transition">
-                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-110 transition"><i class="fas fa-file-pdf"></i></div>
-                        <div class="text-sm">
-                            <p class="font-bold text-slate-900">Manuales PDF</p>
-                            <p class="text-slate-500 text-xs">Plantillas de sesión descargables.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-6 p-4 bg-gradient-to-br from-brand-50 to-white rounded-xl border border-brand-100 text-center shadow-inner">
-                    <p class="text-brand-800 font-bold text-sm mb-1">¡No te quedes afuera!</p>
-                    <p class="text-brand-600 text-xs">Únete a la lista para recibir el descuento de lanzamiento.</p>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre-mi" class="py-20 bg-white border-y border-slate-100">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-        <h2 class="text-3xl font-extrabold text-slate-900">¿Por qué formarte conmigo?</h2>
-        <p class="mt-4 text-slate-600 text-lg">
-            Entiendo tu realidad. He estado en el barro, con falta de materiales y grupos heterogéneos. Te enseño a gestionar <strong>la realidad del club</strong>.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 card-hover" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
-                <i class="fas fa-clipboard-list"></i>
-            </div>
-            <h3 class="font-bold text-slate-900 text-xl mb-3">Enfoque Práctico</h3>
-            <p class="text-slate-600 leading-relaxed">Menos "filosofía abstracta" y más organización en cancha: consignas claras, espacios reducidos y tiempos reales.</p>
-        </div>
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 card-hover" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-14 h-14 rounded-2xl bg-accent-100 text-accent-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
-                <i class="fas fa-child"></i>
-            </div>
-            <h3 class="font-bold text-slate-900 text-xl mb-3">Pedagogía Infantil</h3>
-            <p class="text-slate-600 leading-relaxed">Cómo enseñar, cómo corregir sin gritar y cómo mantener la atención (y la diversión) de niños de 4 a 12 años.</p>
-        </div>
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 card-hover" data-aos="fade-up" data-aos-delay="300">
-            <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
-                <i class="fas fa-layer-group"></i>
-            </div>
-            <h3 class="font-bold text-slate-900 text-xl mb-3">Planificación Real</h3>
-            <p class="text-slate-600 leading-relaxed">Plantillas semanales y mensuales listas para usar. Criterios simples para evaluar si tus jugadores realmente mejoran.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proximamente" class="py-20 bg-slate-50">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4" data-aos="fade-up">
-        <div>
-          <h2 class="text-3xl font-extrabold text-slate-900">Roadmap de Cursos</h2>
-          <p class="mt-2 text-slate-600">Lanzamiento escalonado. Primero lo esencial.</p>
-        </div>
-        <span class="text-sm font-bold text-brand-600 bg-brand-100 px-4 py-2 rounded-full border border-brand-200">
-            <i class="fas fa-rocket mr-1"></i> Lanzamiento 2026
-        </span>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden card-hover group" data-aos="fade-up" data-aos-delay="100">
-            <div class="absolute top-0 right-0 bg-slate-200 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-bl-lg">EN PRODUCCIÓN</div>
-            <p class="text-xs font-bold text-slate-400 uppercase mb-1">Curso 1</p>
-            <h3 class="font-bold text-slate-900 text-lg group-hover:text-brand-600 transition">Iniciación (4-6 años)</h3>
-            <p class="mt-2 text-sm text-slate-600">El descubrimiento. Coordinación básica, relación con el balón y juegos lúdicos.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border-2 border-brand-500 shadow-xl relative overflow-hidden transform md:-translate-y-4 hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="200">
-            <div class="absolute top-0 right-0 bg-gradient-to-r from-brand-600 to-accent-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg shadow-sm">MVP RECOMENDADO</div>
-            <p class="text-xs font-bold text-brand-600 uppercase mb-1">Curso 2</p>
-            <h3 class="font-bold text-slate-900 text-xl">Formación (7-9 años)</h3>
-            <p class="mt-2 text-sm text-slate-600">Técnica individual, 1vs1, ocupación inicial de espacios y principios de ataque/defensa.</p>
-            <div class="mt-4 pt-4 border-t border-slate-100 flex items-center text-xs text-brand-700 font-bold">
-                <i class="fas fa-star text-yellow-400 mr-1"></i> El más solicitado
-            </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden card-hover opacity-90 hover:opacity-100" data-aos="fade-up" data-aos-delay="300">
-            <p class="text-xs font-bold text-slate-400 uppercase mb-1">Curso 3</p>
-            <h3 class="font-bold text-slate-900 text-lg">Pre-Competencia (10-12)</h3>
-            <p class="mt-2 text-sm text-slate-600">Táctica grupal, preparación física integrada y roles posicionales.</p>
-        </div>
-
-        <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl text-white shadow-xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-white/5 rounded-full -mr-10 -mt-10 blur-xl"></div>
-            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition"><i class="fas fa-crown text-yellow-400"></i></div>
-            <h3 class="font-bold text-lg leading-tight mb-2">Programa "Especialista"</h3>
-            <p class="text-sm text-slate-300">Acceso a todo el contenido + mentoría mensual + comunidad privada.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="lista" class="py-24 bg-white relative overflow-hidden">
-    <div class="absolute -right-20 top-20 w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-40"></div>
-    <div class="absolute -left-20 bottom-20 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-40"></div>
-
-    <div class="mx-auto max-w-4xl px-4 relative z-10">
-        <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl relative overflow-hidden" data-aos="zoom-in">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 relative z-10">Únete a la Lista de Espera</h2>
-            <p class="text-slate-300 mb-8 max-w-lg mx-auto relative z-10">
-                Recibe un aviso prioritario cuando lance el primer curso, descuentos exclusivos y algún recurso gratuito ocasional. <br><span class="text-accent-400 font-bold">Sin Spam.</span>
-            </p>
-
-            <form id="waitlistForm" class="max-w-md mx-auto space-y-4 relative z-10">
-                <div class="text-left">
-                    <label class="text-xs font-bold text-slate-400 uppercase ml-1">Tu mejor Email</label>
-                    <input id="email" name="email" type="email" required placeholder="profe@ejemplo.com" 
-                        class="w-full mt-1 px-5 py-4 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:ring-2 focus:ring-accent-500 focus:border-transparent focus:outline-none transition">
-                </div>
-                
-                <div class="text-left">
-                    <label class="text-xs font-bold text-slate-400 uppercase ml-1">Nombre (Opcional)</label>
-                    <input id="nombre" name="nombre" type="text" placeholder="¿Cómo te llamas?" 
-                        class="w-full mt-1 px-5 py-4 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:ring-2 focus:ring-accent-500 focus:border-transparent focus:outline-none transition">
-                </div>
-
-                <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
-
-                <button type="submit" class="w-full btn-primary py-4 rounded-xl font-bold text-lg text-white shadow-lg hover:shadow-accent-500/25 mt-2 transform active:scale-95 transition">
-                    ¡Avísame Kelo! 🚀
-                </button>
-
-                <p id="formMsg" class="hidden text-sm font-semibold mt-4 bg-slate-800/50 py-2 rounded-lg"></p>
-            </form>
-        </div>
-    </div>
-  </section>
-
-  <footer id="contacto" class="bg-slate-50 border-t border-slate-200 py-12">
-    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="text-center md:text-left">
-        <span class="block font-bold text-slate-900 text-xl tracking-tight">Kelo Coach</span>
-        <span class="text-slate-500 text-sm">© <span id="year"></span>. Formación independiente.</span>
-      </div>
-      
-      <div class="flex gap-4">
-        <a href="#" onclick="window.open(window.KC.instagram)" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-pink-600 hover:border-pink-200 hover:shadow-md hover:-translate-y-1 transition"><i class="fab fa-instagram text-xl"></i></a>
-        <a href="#" onclick="window.open(window.KC.youtube)" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-red-600 hover:border-red-200 hover:shadow-md hover:-translate-y-1 transition"><i class="fab fa-youtube text-xl"></i></a>
-        <a href="#" onclick="window.open(window.KC.whatsapp)" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-green-500 hover:border-green-200 hover:shadow-md hover:-translate-y-1 transition"><i class="fab fa-whatsapp text-xl"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#" onclick="window.open(window.KC.whatsapp + '?text=' + encodeURIComponent('Hola Kelo, vengo de tu web!'))" 
-     class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-green-500/40 transition duration-300 animate-bounce">
-    <i class="fab fa-whatsapp text-3xl"></i>
-  </a>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Inicializar animaciones
-    AOS.init({
-      once: true,
-      offset: 100,
-      duration: 800,
-      easing: 'ease-out-cubic',
-    });
-
-    // Poner el año actual
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
   <script type="module">
-    // Importar herramientas de Google
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
     import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
-    // --- PEGA AQUÍ TU CONFIGURACIÓN DE FIREBASE ---
+    // ⬇️⬇️ PEGA AQUÍ TUS CLAVES ⬇️⬇️
     const firebaseConfig = {
-      apiKey: "AIzaSyC5ahEC4TizADQFurFWPfp1GNUz479oV1Q",
-      authDomain: "kelo-coach-web.firebaseapp.com",
-      projectId: "kelo-coach-web",
-      storageBucket: "kelo-coach-web.firebasestorage.app",
-      messagingSenderId: "923103040140",
-      appId: "1:923103040140:web:a84e31b6dee5d77cba21a9",
-      measurementId: "G-PSLYSHYXBY"
+      apiKey: "PEGA_TU_API_KEY_AQUI",  
+      authDomain: "kelo-coach.firebaseapp.com",
+      projectId: "kelo-coach",
+      storageBucket: "kelo-coach.firebasestorage.app",
+      messagingSenderId: "TUS_NUMEROS",
+      appId: "TU_ID_LARGO",             
+      measurementId: "G-TU_ANALYTICS"   
     };
-    // ----------------------------------------------
+    // ⬆️⬆️ ----------------------- ⬆️⬆️
 
-    // Iniciar conexión
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-    const analytics = getAnalytics(app);
+    if (firebaseConfig.measurementId) { try { const analytics = getAnalytics(app); } catch(e) {} }
 
-    // Lógica del Formulario
     const form = document.getElementById('waitlistForm');
     const msg = document.getElementById('formMsg');
 
@@ -380,38 +402,26 @@
         e.preventDefault();
         const btn = form.querySelector('button');
         const originalText = btn.innerHTML;
-
-        // Feedback visual
         btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Guardando...';
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ...';
         msg.classList.add('hidden');
-        msg.classList.remove('text-green-400', 'text-red-400');
 
         const formData = new FormData(form);
-        const email = formData.get('email');
-        const nombre = formData.get('nombre');
-        const honey = formData.get('website');
-
-        if (honey) return; // Anti-robots
+        if (formData.get('website')) return; 
 
         try {
-          // Guardar en Firebase
           await addDoc(collection(db, "lista_espera"), {
-            email: email,
-            nombre: nombre,
+            email: formData.get('email'),
+            nombre: formData.get('nombre'),
             fecha: serverTimestamp(),
-            origen: "web_home"
+            origen: "web_dark_v6_faq"
           });
-
-          // Éxito
-          msg.className = "text-sm font-bold text-accent-400 mt-3 block animate-pulse";
-          msg.innerHTML = '<i class="fas fa-check-circle"></i> ¡Listo! Ya estás dentro.';
+          msg.classList.remove('hidden');
+          msg.innerHTML = '¡REGISTRADO! GRACIAS PROFE.';
           form.reset();
-
         } catch (err) {
-          console.error("Error:", err);
-          msg.className = "text-sm font-bold text-red-400 mt-3 block";
-          msg.textContent = "Error de conexión. Intenta más tarde.";
+          console.error(err);
+          alert("Error de conexión");
         } finally {
           btn.disabled = false;
           btn.innerHTML = originalText;
@@ -421,6 +431,7 @@
   </script>
 </body>
 </html>
+
 
 
 
