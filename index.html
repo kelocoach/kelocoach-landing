@@ -31,7 +31,6 @@
   </script>
 
   <style>
-    /* El nav ya no tiene color fijo, lo maneja el JS */
     .hero-animate { animation: fadeIn 1.5s ease-out; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .float-btn { animation: float 3s ease-in-out infinite; }
@@ -44,9 +43,7 @@
   <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-slate-900 font-black text-xl shadow-lg">
-          <i class="fa-solid fa-futbol"></i>
-        </div>
+        <img src="Gemini_Generated_Image_7n7sni7n7sni7n7s.png" alt="Logo Kelo" class="h-12 w-12 object-contain rounded-lg shadow-lg">
         <span class="font-bold text-xl tracking-wide text-white">KELO<span class="text-brand-400">COACH</span></span>
       </a>
 
@@ -64,11 +61,17 @@
 
   <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="20240508035815_IMG_9376.JPG" class="w-full h-full object-cover hero-animate" alt="Kelo Coach">
-      <div class="absolute inset-0 bg-slate-900/85 bg-gradient-to-t from-slate-900 via-slate-900/70 to-slate-900/50"></div>
+      <img src="20240508035815_IMG_9376.jpg" class="w-full h-full object-cover hero-animate" alt="Kelo Coach">
+      <div class="absolute inset-0 bg-slate-900/65 bg-gradient-to-t from-slate-900 via-slate-900/65 to-slate-900/20"></div>
     </div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-10" data-aos="zoom-out-up">
+      
+      <div class="inline-flex items-center gap-2 bg-brand-500/10 backdrop-blur-md border border-brand-500/20 rounded-full px-4 py-2 mb-8">
+        <span class="w-2 h-2 bg-brand-500 rounded-full animate-pulse"></span>
+        <span class="text-brand-400 text-xs font-bold tracking-widest uppercase">Formación de Alto Rendimiento</span>
+      </div>
+
       <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-tight mb-6 drop-shadow-2xl text-white">
         Evoluciona tu <br/>
         <span class="text-brand-400">Poder de Enseñanza</span>
@@ -84,6 +87,23 @@
           <i class="fa-solid fa-bolt text-yellow-400"></i> Ver Roadmap
         </a>
       </div>
+    </div>
+
+    <div class="absolute bottom-0 w-full bg-slate-900/50 backdrop-blur-md border-t border-white/5 py-6 hidden md:block z-20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-around text-center">
+            <div>
+                <span class="block text-2xl font-black text-white">500+</span>
+                <span class="text-xs text-slate-400 uppercase tracking-wider">Entrenadores</span>
+            </div>
+            <div>
+                <span class="block text-2xl font-black text-white">50+</span>
+                <span class="text-xs text-slate-400 uppercase tracking-wider">Recursos</span>
+            </div>
+            <div>
+                <span class="block text-2xl font-black text-white">100%</span>
+                <span class="text-xs text-slate-400 uppercase tracking-wider">Online</span>
+            </div>
+        </div>
     </div>
   </header>
 
@@ -137,39 +157,67 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <article class="bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
-            <div class="relative h-48 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Resúmenes</span>
+        
+        <article class="group bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 shadow-lg hover:shadow-brand-500/10">
+            <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                <span class="absolute bottom-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg">
+                    Resúmenes
+                </span>
             </div>
-            <div class="p-6">
-                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Liderazgo en el Vestuario</h4>
-                <p class="text-slate-400 text-sm line-clamp-2 mt-2">Lecciones de humildad y excelencia aplicadas al fútbol.</p>
-                <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
-            </div>
-        </article>
-
-        <article class="bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
-            <div class="relative h-48 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Metodología</span>
-            </div>
-            <div class="p-6">
-                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">¿Descubrimiento o Mando?</h4>
-                <p class="text-slate-400 text-sm line-clamp-2 mt-2">Análisis de estilos para fomentar jugadores inteligentes.</p>
-                <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
+            <div class="p-8">
+                <div class="flex items-center gap-4 text-xs text-slate-500 mb-3 font-medium">
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 20 Oct</span>
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 10 min</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3 leading-tight group-hover:text-brand-400 transition">Liderazgo en el Vestuario</h4>
+                <p class="text-slate-400 text-sm line-clamp-2 mb-6">Lecciones de humildad y excelencia aplicadas al vestuario de fútbol.</p>
+                <a href="#waitlist" class="inline-flex items-center gap-2 text-brand-400 text-sm font-bold hover:text-white transition">
+                    Leer Artículo <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </article>
 
-        <article class="bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition group hover:-translate-y-1 duration-300 shadow-lg">
-            <div class="relative h-48 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1543326727-25e5508a287c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                <span class="absolute top-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Psicología</span>
+        <article class="group bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 shadow-lg hover:shadow-brand-500/10">
+            <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                <span class="absolute bottom-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg">
+                    Metodología
+                </span>
             </div>
-            <div class="p-6">
-                <h4 class="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-400 transition">Psicología del Portero</h4>
-                <p class="text-slate-400 text-sm line-clamp-2 mt-2">Resiliencia y mentalidad tras el error.</p>
-                <a href="#waitlist" class="inline-block mt-4 text-brand-400 text-sm font-bold hover:underline">Leer más →</a>
+            <div class="p-8">
+                <div class="flex items-center gap-4 text-xs text-slate-500 mb-3 font-medium">
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 15 Oct</span>
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 7 min</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3 leading-tight group-hover:text-brand-400 transition">¿Descubrimiento o Mando?</h4>
+                <p class="text-slate-400 text-sm line-clamp-2 mb-6">Análisis de estilos para fomentar jugadores inteligentes.</p>
+                <a href="#waitlist" class="inline-flex items-center gap-2 text-brand-400 text-sm font-bold hover:text-white transition">
+                    Leer Artículo <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <article class="group bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 shadow-lg hover:shadow-brand-500/10">
+            <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1543326727-25e5508a287c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                <span class="absolute bottom-4 left-4 bg-brand-500 text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg">
+                    Psicología
+                </span>
+            </div>
+            <div class="p-8">
+                <div class="flex items-center gap-4 text-xs text-slate-500 mb-3 font-medium">
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 10 Oct</span>
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 6 min</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3 leading-tight group-hover:text-brand-400 transition">Psicología del Portero</h4>
+                <p class="text-slate-400 text-sm line-clamp-2 mb-6">Resiliencia y mentalidad tras el error.</p>
+                <a href="#waitlist" class="inline-flex items-center gap-2 text-brand-400 text-sm font-bold hover:text-white transition">
+                    Leer Artículo <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </article>
       </div>
@@ -301,12 +349,12 @@
   <footer class="bg-dark-950 pt-20 pb-10 border-t border-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div class="md:col-span-2 space-y-6">
+            
             <a href="#" class="flex items-center gap-2 group">
-                <div class="w-8 h-8 bg-brand-500 rounded flex items-center justify-center text-slate-900 font-bold">
-                  <i class="fa-solid fa-futbol"></i>
-                </div>
+                <img src="Gemini_Generated_Image_7n7sni7n7sni7n7s.png" alt="Logo Kelo" class="h-10 w-10 object-contain rounded-lg opacity-80 group-hover:opacity-100 transition">
                 <span class="font-bold text-xl tracking-tight">KELO<span class="text-brand-500">COACH</span></span>
             </a>
+
             <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
                 Empoderando a formadores para alcanzar la excelencia en la enseñanza, 
                 planificación y gestión estratégica del fútbol moderno.
@@ -366,7 +414,7 @@
       youtube: "https://www.youtube.com/@Kelocoach"
     }
 
-    // 🔥 LOGICA DEL MENÚ DINÁMICO 🔥
+    // LOGICA DEL MENÚ DINÁMICO
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -420,7 +468,7 @@
             email: formData.get('email'),
             nombre: formData.get('nombre'),
             fecha: serverTimestamp(),
-            origen: "web_dynamic_v8"
+            origen: "web_v11_master"
           });
           msg.classList.remove('hidden');
           msg.innerHTML = '¡REGISTRADO! GRACIAS PROFE.';
@@ -437,5 +485,6 @@
   </script>
 </body>
 </html>
+
 
 
