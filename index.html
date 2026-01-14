@@ -40,13 +40,28 @@
 
 <body class="bg-slate-900 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4">
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-3 border-b border-white/5 bg-slate-900/90 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      
       <a href="#" class="flex items-center gap-3 group">
-        <link rel="icon" type="image/png" href="logo-kelo.png">
-        <img src="logo-header.png.png" alt="Logo Kelo" class="h-14 w-auto object-contain hover:scale-105 transition">
-        <span class="font-bold text-xl tracking-wide text-white">KELO<span class="text-brand-400">COACH</span></span>
+        <img src="logo-kelo.png" alt="Logo Kelo" class="h-10 md:h-12 w-auto object-contain transition transform group-hover:scale-105">
+        
+        <div class="flex flex-col justify-center h-full">
+          <span class="font-black text-xl md:text-2xl tracking-tighter text-white leading-none">
+            KELO<span class="text-brand-400">COACH</span>
+          </span>
+        </div>
       </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300 tracking-wide">
+        <a href="#roadmap" class="hover:text-white hover:text-brand-400 transition">CURSOS</a>
+        <a href="#blog" class="hover:text-white hover:text-brand-400 transition">BLOG</a>
+        <a href="#waitlist" class="px-6 py-2.5 rounded-xl bg-brand-500 text-slate-900 font-bold hover:bg-brand-400 transition shadow-[0_0_15px_rgba(16,185,129,0.4)] flex items-center gap-2">
+          <span>ACCESO</span>
+        </a>
+      </div>
+    </div>
+  </nav>
 
       <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-white/90">
         <a href="#roadmap" class="hover:text-brand-400 transition">CURSOS</a>
@@ -486,6 +501,7 @@
   </script>
 </body>
 </html>
+
 
 
 
