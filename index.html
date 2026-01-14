@@ -53,23 +53,23 @@
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300 tracking-wide">
+      <div class="hidden md:flex items-center gap-6 text-sm font-bold text-slate-300 tracking-wide">
         <a href="#roadmap" class="hover:text-white hover:text-brand-400 transition">CURSOS</a>
+        
         <a href="#blog" class="hover:text-white hover:text-brand-400 transition">BLOG</a>
-        <a href="#waitlist" class="px-6 py-2.5 rounded-xl bg-brand-500 text-slate-900 font-bold hover:bg-brand-400 transition shadow-[0_0_15px_rgba(16,185,129,0.4)] flex items-center gap-2">
+
+        <a href="#faq" class="hover:text-white hover:text-brand-400 transition">DUDAS</a> 
+        
+        <a href="#waitlist" class="ml-2 px-6 py-2.5 rounded-xl bg-brand-500 text-slate-900 font-bold hover:bg-brand-400 transition shadow-[0_0_15px_rgba(16,185,129,0.4)] flex items-center gap-2">
           <span>ACCESO</span>
         </a>
-      </div>
-    </div>
-  </nav>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-white/90">
-        <a href="#roadmap" class="hover:text-brand-400 transition">CURSOS</a>
-        <a href="#blog" class="hover:text-brand-400 transition">BLOG</a>
-        <a href="#faq" class="hover:text-brand-400 transition">DUDAS</a> 
-        <a href="#waitlist" class="hover:text-brand-400 transition">ACCESO ALUMNOS</a>
-        <a href="#waitlist" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center hover:bg-brand-500 hover:text-slate-900 transition border border-white/10">
-          <i class="fa-solid fa-cart-shopping"></i>
+        <a href="#waitlist" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition border border-white/10 relative group">
+           <i class="fa-solid fa-cart-shopping"></i>
+           <span class="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
+             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+             <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
+           </span>
         </a>
       </div>
     </div>
@@ -367,7 +367,7 @@
         <div class="md:col-span-2 space-y-6">
             
             <a href="#" class="flex items-center gap-2 group">
-                <img src="Gemini_Generated_Image_7n7sni7n7sni7n7s.png" alt="Logo Kelo" class="h-10 w-10 object-contain rounded-lg opacity-80 group-hover:opacity-100 transition">
+                <img src="logo-header.png" alt="Logo Kelo" class="h-10 w-10 object-contain rounded-lg opacity-80 group-hover:opacity-100 transition">
                 <span class="font-bold text-xl tracking-tight">KELO<span class="text-brand-500">COACH</span></span>
             </a>
 
@@ -448,7 +448,7 @@
     import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
-    // ⬇️⬇️ PEGA AQUÍ TUS CLAVES ⬇️⬇️
+    // TUS CLAVES DE FIREBASE
     const firebaseConfig = {
      apiKey: "AIzaSyC5ahEC4TizADQFurFWPfp1GNUz479oV1Q",
       authDomain: "kelo-coach-web.firebaseapp.com",
@@ -458,7 +458,6 @@
       appId: "1:923103040140:web:a84e31b6dee5d77cba21a9",
       measurementId: "G-PSLYSHYXBY"
     };
-    // ⬆️⬆️ ----------------------- ⬆️⬆️
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
@@ -484,7 +483,7 @@
             email: formData.get('email'),
             nombre: formData.get('nombre'),
             fecha: serverTimestamp(),
-            origen: "web_v11_master"
+            origen: "web_v13_navbar_fix"
           });
           msg.classList.remove('hidden');
           msg.innerHTML = '¡REGISTRADO! GRACIAS PROFE.';
@@ -501,11 +500,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
