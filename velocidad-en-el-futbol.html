@@ -147,10 +147,77 @@
     </div>
   </article>
 
-  <footer class="bg-dark-950 py-10 border-t border-slate-900 text-center text-slate-500 text-sm">
-    <p>© 2025 Kelo Coach. Todos los derechos reservados.</p>
-    <a href="index.html" class="text-brand-500 hover:underline mt-2 inline-block">Volver al Inicio</a>
+  <footer class="bg-dark-950 pt-20 pb-10 border-t border-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="md:col-span-2 space-y-6">
+            
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="logo-header.png.png" alt="Logo Kelo" class="h-10 w-10 object-contain rounded-lg opacity-80 group-hover:opacity-100 transition">
+                <span class="font-bold text-xl tracking-tight">KELO<span class="text-brand-500">COACH</span></span>
+            </a>
+
+            <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                Empoderando a formadores para alcanzar la excelencia en la enseñanza, 
+                planificación y gestión estratégica del fútbol moderno.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" onclick="window.open(window.KC.instagram)" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-slate-900 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" onclick="window.open(window.KC.youtube)" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-bold mb-6">Enlaces Rápidos</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+                <li><a href="index.html" class="hover:text-brand-500 transition">Inicio</a></li>
+                <li><a href="index.html#roadmap" class="hover:text-brand-500 transition">Servicios</a></li>
+                <li><a href="index.html#blog" class="hover:text-brand-500 transition">Blog Táctico</a></li>
+                <li><a href="index.html#faq" class="hover:text-brand-500 transition">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold mb-6">Contacto</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+                <li class="flex items-center gap-3">
+                    <i class="fa-regular fa-envelope text-brand-500"></i>
+                    <span>hola@kelocoach.com</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-location-dot text-brand-500"></i>
+                    <span>Buenos Aires, Argentina</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-brand-500"></i>
+                    <a href="#" onclick="window.open(window.KC.whatsapp)" class="hover:text-white transition">Hablemos por WhatsApp</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>© <span id="year"></span> Kelo Coach. Todos los derechos reservados.</p>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-slate-300">Privacidad</a>
+            <a href="#" class="hover:text-slate-300">Términos</a>
+        </div>
+    </div>
   </footer>
+
+  <a href="#" onclick="window.open(window.KC.whatsapp)" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center shadow-lg shadow-brand-500/30 hover:bg-brand-400 transition transform hover:scale-110 float-btn">
+      <i class="fa-brands fa-whatsapp text-2xl text-slate-900"></i>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // CONFIGURACIÓN CENTRAL DE TUS REDES
+    window.KC = {
+      whatsapp: "https://wa.me/5491123901640", 
+      instagram: "https://instagram.com/kelocoach",
+      youtube: "https://www.youtube.com/@Kelocoach"
+    }
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
