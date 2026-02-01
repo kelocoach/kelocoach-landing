@@ -1,0 +1,9 @@
+# Kelo Coach
+Sitio de formación para entrenadores de fútbol infantil y juvenil.
+
+## Secciones Principales
+- Home: https://www.kelocoach.com/
+- Blog: https://www.kelocoach.com/velocidad-en-el-futbol.html
+
+## Contenido
+Ofrecemos cursos de metodología, táctica, liderazgo y gestión deportiva.
